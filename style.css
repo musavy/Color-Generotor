@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  padding: 5px;
+  height: 500px;
+/*     background-image: url("./image/color-theory-1.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;  */
+ 
+}
+div {
+  border: 2px soild violet;
+}
+.Colorbox {
+  margin: auto;
+
+  padding: 5px;
+  width: 998px;
+  height: 200px;
+  text-align: center;
+  border-radius: 30px;
+  float: center;
+  border: 2px soild black;
+}
+
+.header-rgb {
+  width: 50rem;
+  float: center;
+  margin: auto;
+  height: 150px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.header-rgb>p{
+    	color:purple;
+	text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red;
+    font: 30px 'BlackJackRegular';
+    
+}
+div {
+  width: auto;
+  height: auto;
+  border-radius: 30px;
+  margin: auto;
+  padding: 1px;
+}
+.header-rgb > button {
+  background-color: lightgreen;
+  margin: auto;
+  padding: 1px;
+  height: 30px;
+  width: 100px;
+  border-radius: 30px;
+  float: center;
+  position: absolute;
+  margin-top: 3px;
+}
+div > button {
+  background-color: lightgreen;
+  margin: auto;
+  padding: 1px;
+  height: 30px;
+  width: 100px;
+  border-radius: 30px;
+  margin-left: 50%;
+  margin-top: 50px;
+}
+
+input {
+  width: 500px;
+  text-align: center;
+  border-radius: 20px;
+  height: 30px;
+  /* background-image: url("./image/RGB.jpg"); */
+  color:tomato;
+  font-size: 25px;
+}
+
+::-webkit-input-placeholder {
+  color:black;
+}
+h1 {
+color:black;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+    font: 50px 'ChunkFiveRegular';
+    padding: 20px;
+}

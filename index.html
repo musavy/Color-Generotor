@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="header-rgb">
+      <h1>HexaDecimal Color Generator</h1>
+      <input type="text" placeholder="Enter a number greater than 5" />
+      <button onclick="RGB()">Generator</button><br /><br /><p><marquee>
+      Colors change people <em>emotions</em>so put meaningful colors on your site.</marquee></p>
+     
+    </div>
+
+    <div class="data"></div>
+    
+    <script>
+      const arry = [];
+
+      const rgbChen = () => {
+        let r = Math.floor(Math.random() * 0xff).toString(16);
+        let g = Math.floor(Math.random() * 0xff).toString(16);
+        let b = Math.floor(Math.random() * 0xff).toString(16);
+        return `#${r}${g}${b}`;
+      };
+      /*  console.log(rgbChen); */
+
+      function RGB() {
+        const headerRgb = document.querySelector(".data");
+        headerRgb.innerHTML = "";
+        for (let i = 0; i < 5; i++) {
+          let color = rgbChen();
+          arry.push(color);
+          console.log(color);
+        }
+
+        showColors();
+      }
+
+      function showColors() {
+        const headerRgb = document.querySelector(".data");
+        headerRgb.innerHTML = "";
+        for (let i = 0; i < arry.length; i++) {
+          let box = document.createElement("div");
+          box.setAttribute('class','Colorbox')
+          let btn = document.createElement("button");
+          let span=document.createElement('span');
+          btn.textContent = "Copy";
+          box.style.background = arry[i];
+          box.appendChild(span);
+         /*  box.textContent = arry[i]; */
+          span.textContent=arry[i];
+           btn.addEventListener("click",(e) => {
+            
+               try{
+
+             var range=document.createRange()
+             range.selectNodeContents(span);
+             var selection=window.getSelection();
+             selection.removeAllRanges();
+             selection.addRange(range);
+            
+               }
+               catch(error){
+                   console.log(error);   
+               }
+               document.execCommand('copy');
+          }); 
+          box.appendChild(btn);
+          headerRgb.appendChild(box);
+          
+        }
+      }
+     
+    </script>
+  </body>
+</html>
