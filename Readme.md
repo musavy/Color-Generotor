@@ -1,6 +1,6 @@
 # Demo
 
-[BMI]
+[Color](https://musavy.github.io/Color-Generotor/.)
 
 # Technologies
 
